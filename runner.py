@@ -1,12 +1,25 @@
 import os
+import platform
 
-EXE = '/home/peter/.conda/envs/alpha.torch/bin/python'
+PUMA = 'puma'
+OBAMA = 'obama'
+if platform.node() == PUMA:
+    EXE = '/home/peter/anaconda3/envs/alpha/bin/python'
+    VIDEOPATH = '/home/peter/dataset/gist'
+    PATH_OUTPUT_ROOT = '/home/peter/dataset/alpha_gist'
+
+
+else:
+    EXE = '/home/peter/.conda/envs/alpha.torch/bin/python'
+    VIDEOPATH = '/home/peter/extra/dataset/gist'
+    PATH_OUTPUT_ROOT = '/home/peter/extra/dataset/alpha_gist'
+
+
+
+
 PY = 'video_demo.py'
 
-VIDEOPATH = '/home/peter/dataset/gist'
 OUTPATH = os.path.join(VIDEOPATH, 'output')
-
-PATH_OUTPUT_ROOT = '/home/peter/dataset/alpha_gist'
 DATA = 'gist/'
 
 if not os.path.exists(PATH_OUTPUT_ROOT):
