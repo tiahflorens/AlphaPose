@@ -3,14 +3,16 @@ import platform
 
 PUMA = 'puma'
 OBAMA = 'obama'
-if platform.node() == PUMA:
-    EXE = '/home/peter/anaconda3/envs/alpha/bin/python'
+
+
+if platform.node() == PUMA: #
+    EXE = '/home/peter/.conda/envs/alpha.torch/bin/python'
     VIDEOPATH = '/home/peter/dataset/gist'
     PATH_OUTPUT_ROOT = '/home/peter/dataset/alpha_gist'
 
 
 else:
-    EXE = '/home/peter/.conda/envs/alpha.torch/bin/python'
+    EXE = '/home/peter/anaconda3/envs/alpha/bin/python'
     VIDEOPATH = '/home/peter/extra/dataset/gist'
     PATH_OUTPUT_ROOT = '/home/peter/extra/dataset/alpha_gist'
 
